@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		jQuery ajax() Method
+	</title>
+
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+ 
+</head>
+
+<body style="text-align:center;">
+
+	<h1 style="color:green">
+		GeeksForGeeks
+	</h1>
+    <div class="hi"></div>
+
+	<h3 id="h11"></h3>
+
+	<button>Click</button>
+    <input type="button" value="click" id="btn2">
+
+	<!-- Script to use ajax() method to
+		add text content -->
+	<script>
+		$(document).ready(function () {
+			$("#btn2").click(function () {
+				$.ajax({
+					url: "raw.html",
+					success: function (result) {
+						$("#h11").html(result);
+                        
+					}
+				});
+			});
+            $("button").click(function () {
+				$.ajax({
+					url: "https://dummyjson.com/carts",
+					success: function (result) {
+						console.log(result);
+                        
+					}
+				});
+			});
+		
+        
+        
+        }
+        
+        );
+
+	</script>
+</body>
+
+</html>

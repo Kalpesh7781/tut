@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //closure 
+        //the functin that bundled with lexical scope is called closure
+        //if inner function get executed still it have scope of outer variable
+
+        function dosome()
+        {
+            let x=10;
+            function hello()
+            {
+                alert(x);
+            }
+          x=x+10;
+            return hello;  
+            
+
+
+        }
+
+        let y=dosome();
+        y();
+    </script>
+</body>
+</html>

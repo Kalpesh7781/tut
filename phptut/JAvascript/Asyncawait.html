@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <script>
+        //async function make function return promise
+        // async function myFunction() {
+        //                               return "Hello";
+        //                             }
+        // is same as
+        // function myFunction() {
+        //                         return Promise.resolve("Hello");
+        //                       }
+
+        //await make function wait for complete promise
+
+
+
+        async function delayAndLog() {
+  console.log("Start");
+  // Simulate a delay of 2 seconds
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  console.log("End after delay");
+}
+delayAndLog();
+
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+
+
+
+    </script>
+    
+</body>
+</html>

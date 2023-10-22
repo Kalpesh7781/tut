@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //it is special object which produces value after an aschronnus operation  complete sucessfull or an eroor if does not complete sucessfully
+        let mypromise = new Promise(function(resolve, reject) {
+    let x = 10;
+    let y = 210;
+    if (x < y) {
+        resolve(700);
+    } else {
+        reject();
+    }
+});
+
+console.log(mypromise);
+
+mypromise.then(function(value) {
+    alert("done");
+    return value;
+})
+.then((value)=>{console.log(value);})
+.catch(function() {
+    alert("error occurred");
+});
+
+    </script>
+</body>
+</html>
